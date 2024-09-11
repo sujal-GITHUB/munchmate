@@ -51,7 +51,7 @@
     border: none;
 }
 
-@media (max-width:750px) {
+@media (max-width:950px) {
     .footer-content{
         display: flex;
         flex-direction: column;
