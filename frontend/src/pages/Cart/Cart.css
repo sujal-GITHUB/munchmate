@@ -95,6 +95,23 @@
     border: none;
     color: white;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+[data-theme='dark'] .cart-items-title{
+    color: grey;
+}
+
+[data-theme='dark'] .cart-items-item{
+    color: white;
+}
+
+[data-theme='dark'] .cart-total-details{
+    color: rgb(181, 181, 181);
+}
+
+[data-theme='dark'] .cart-promocode-input button{
+     background-color: tomato;
 }
 
 @media (max-width:750px) {

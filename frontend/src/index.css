@@ -1,33 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+/* Define default light theme colors */
+:root {
+  --background-color: #ffffff; /* Light background color */
+  --text-color: #000000;       /* Light text color */
+  --navbar-bg: #ffffff;        /* Navbar background color */
+  --navbar-text-color: #000000; /* Navbar text color */
+}
+
+/* Define dark theme colors */
+[data-theme='dark'] {
+  --background-color: #000000; /* Dark background color */
+  --text-color: #ffffff;       /* Dark text color */
+  --navbar-bg: #000000;        /* Navbar background color */
+  --navbar-text-color: #ffffff; /* Navbar text color */
+}
+
+/* Apply global styles */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
 }
 
-body{
+body {
   min-height: 100vh;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-.app{
+.app {
   width: 80%;
   margin: auto;
 }
 
-@keyframes fadeIn{
-  0%{
+/* Navbar styles */
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text-color);
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }
-

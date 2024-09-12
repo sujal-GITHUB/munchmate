@@ -1,35 +1,57 @@
-.explore-menu{
+/* Define default light theme colors */
+:root {
+    --explore-menu-bg: #ffffff; /* Light background color for explore menu */
+    --explore-menu-text-color: #262626; /* Light text color for h1 */
+    --explore-menu-subtext-color: #808080; /* Light color for text */
+    --explore-menu-item-color: #747474; /* Light color for list item text */
+    --explore-menu-border-color: #e2e2e2; /* Light border color for hr */
+    --explore-menu-active-border: tomato; /* Light color for active border */
+}
+
+/* Define dark theme colors */
+[data-theme='dark'] {
+    --explore-menu-bg: #000000; /* Dark background color for explore menu */
+    --explore-menu-text-color: #ffffff; /* Dark text color for h1 */
+    --explore-menu-subtext-color: #cccccc; /* Dark color for text */
+    --explore-menu-item-color: #aaaaaa; /* Dark color for list item text */
+    --explore-menu-border-color: #666666; /* Dark border color for hr */
+    --explore-menu-active-border: #ff5733; /* Dark color for active border */
+}
+
+/* Explore menu styles */
+.explore-menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: var(--explore-menu-bg); /* Apply background color */
 }
 
-.explore-menu h1{
-    color: #262626;
+.explore-menu h1 {
+    color: var(--explore-menu-text-color); /* Apply text color */
     font-weight: 500;
-    padding-top: 15px ;
+    padding-top: 15px;
 }
 
-.explore-menu-text{
+.explore-menu-text {
     max-width: 60%;
-    color: #808080;
+    color: var(--explore-menu-subtext-color); /* Apply text color */
 }
 
-.explore-menu-list{
+.explore-menu-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
     text-align: center;
-    margin: 20px 0px;
+    margin: 20px 0;
     overflow-x: scroll;
 }
 
-.explore-menu-list::-webkit-scrollbar{
+.explore-menu-list::-webkit-scrollbar {
     display: none;
 }
 
-.explore-menu-list-item img{
+.explore-menu-list-item img {
     width: 7.5vw;
     min-width: 80px;
     cursor: pointer;
@@ -37,29 +59,28 @@
     transition: 0.2s;
 }
 
-.explore-menu-list-item p{
+.explore-menu-list-item p {
     margin-top: 10px;
-    color: #747474;
+    color: var(--explore-menu-item-color); /* Apply text color */
     font-size: max(1.4vw, 16px);
     cursor: pointer;
 }
 
-.explore-menu hr{
-    margin: 10px 0px;
+.explore-menu hr {
+    margin: 10px 0;
     height: 2px;
-    background-color: #e2e2e2;
+    background-color: var(--explore-menu-border-color); /* Apply border color */
     border: none;
 }
 
-.explore-menu-list-item .active{
-    border: 4px solid tomato;
+.explore-menu-list-item .active {
+    border: 4px solid var(--explore-menu-active-border); /* Apply active border color */
     padding: 2px;
-    
 }
 
-@media (max-width:1050px) {
-    .explore-menu-text{
+@media (max-width: 1050px) {
+    .explore-menu-text {
         max-width: 100%;
-        font-size: 14px;    
+        font-size: 14px;
     }
 }

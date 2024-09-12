@@ -10,16 +10,17 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 const App = () => {
 
   const [showLogin, setShowLogin] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <>
     {showLogin ? <LoginPopup setShowLogin={setShowLogin}/> : <></>}
       <div className='app'>
-      <Navbar setShowLogin={setShowLogin}/>
+      <Navbar setShowLogin={setShowLogin} setDarkMode={setDarkMode} darkMode={darkMode}/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/Order' element={<Order/>}/>
+        <Route path='/' element={<Home setDarkMode={setDarkMode} darkMode={darkMode}/>}/>
+        <Route path='/cart' element={<Cart darkMode={darkMode}/>}/>
+        <Route path='/Order' element={<Order darkMode={darkMode}/>}/>
       </Routes> 
     </div>
     <Footer/>

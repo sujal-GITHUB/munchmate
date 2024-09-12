@@ -1,16 +1,35 @@
-.food-display{
-    margin-top: 30px;
+/* Define default light theme colors */
+:root {
+    /* Existing variables */
+    --food-display-text-color: #262626; /* Light color for food display titles */
+    --food-display-bg: #ffffff; /* Light background for food display */
 }
 
-.food-display h2{
+/* Define dark theme colors */
+[data-theme='dark'] {
+    /* Existing variables */
+    --food-display-text-color: #ffffff; /* Dark color for food display titles */
+    --food-display-bg: #000000; /* Dark background for food display */
+}
+
+/* Food display styles */
+.food-display {
+    margin-top: 30px;
+    background-color: var(--food-display-bg); /* Apply background color */
+}
+
+.food-display h2 {
     font-size: max(2vw, 24px);
     font-weight: 600;
+    color: var(--food-display-text-color); /* Apply text color */
 }
 
-.food-display-list{
+/* Food display list styles */
+.food-display-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     margin-top: 30px;
     gap: 30px;
     row-gap: 50px;
+    /* No shadows applied */
 }

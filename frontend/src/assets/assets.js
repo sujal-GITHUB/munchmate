@@ -60,7 +60,12 @@ import bag_icon from './bag_icon.png'
 import logout_icon from './logout_icon.png'
 import parcel_icon from './parcel_icon.png'
 
+import moon from './moon.png'
+import sun from './sun.png'
+
 export const assets = {
+    sun,
+    moon,
     logo,
     basket_icon,
     header_img,
