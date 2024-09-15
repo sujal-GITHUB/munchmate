@@ -1,34 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-*{
+/* Define default light theme colors */
+:root {
+  --background-color: #ffffff; /* Light background color */
+  --text-color: #000000;       /* Light text color */
+  --navbar-bg: #ffffff;        /* Navbar background color */
+  --navbar-text-color: #000000; /* Navbar text color */
+  --link-color: #5f5f5f;       /* Default link color */
+  --link-hover-color: tomato; /* Link hover color */
+}
+
+/* Define dark theme colors */
+[data-theme='dark'] {
+  --background-color: #000000; /* Dark background color */
+  --text-color: #ffffff;       /* Dark text color */
+  --navbar-bg: #000000;        /* Navbar background color */
+  --navbar-text-color: #ffffff; /* Navbar text color */
+  --link-color: #ffffff;       /* Link color in dark mode */
+  --link-hover-color: tomato; /* Link hover color in dark mode */
+}
+
+/* Apply global styles */
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Outfit;
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
 }
 
-body{
+body {
   min-height: 100vh;
-  background-color: #fcfcfc;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
-a{
+a {
   text-decoration: none;
-  color: inherit;
+  color: var(--link-color);
+  transition: color 0.3s ease;
 }
 
-hr{
-  border: none;
-  height: 1px;
-  background-color: #a9a9a9;
+a:hover {
+  color: var(--link-hover-color);
 }
 
-.app-content{
+.app-content {
   display: flex;
 }
 
-.flex-col{
+.app {
+  width: 80%;
+  margin: auto;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--navbar-text-color);
+  padding: 10px 20px; /* Example padding; adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in animation */
+body {
+  animation: fadeIn 1s ease-in-out;
 }

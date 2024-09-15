@@ -1,3 +1,21 @@
+:root {
+    --navbar-bg: #ffffff; /* Light background */
+    --text-color: #000000; /* Light text color */
+    --button-border: tomato;
+    --button-bg: transparent;
+    --button-hover-bg: #fff4f2;
+}
+
+/* Dark theme */
+[data-theme='dark'] {
+    --navbar-bg: #333333; /* Dark background */
+    --text-color: #ffffff; /* Dark text color */
+    --button-border: #ff5733;
+    --button-bg: #000000;
+    --button-hover-bg: #313131;
+}
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -11,4 +29,17 @@
 
 .navbar .profile{
     width: 40px;
+}
+
+.right{
+    display: flex;
+    gap: 20px;
+}
+
+.dark-mode{
+    cursor: pointer;
+}
+
+.logo{
+    cursor: pointer;
 }

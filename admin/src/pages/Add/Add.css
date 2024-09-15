@@ -1,42 +1,62 @@
-.add{
+.add {
     width: 70%;
     margin-left: max(5vw, 25px);
     margin-top: 50px;
-    color: #6d6d6d;
+    color: var(--add-text-color, #6d6d6d);
     font-size: 16px;
 }
 
-.add form{
+.add form {
     gap: 20px;
 }
 
-.add-image-upload img{
+.add-image-upload img {
     width: 120px;
 }
 
-.add-product-name, .add-product-description{
-    width: max(40%,290px);
+.add-product-name, .add-product-description {
+    width: max(40%, 290px);
+    color: var(--add-text-color, #6d6d6d);
 }
 
-.add-product-name input, .add-product-description textarea{
+.add-product-name input, .add-product-description textarea {
     padding: 10px;
+    background-color: var(--input-bg, #ffffff);
+    color: var(--input-text-color, #000000);
+    border: 1px solid var(--input-border-color, #cccccc);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.add-category-price{
+.add-category-price {
     display: flex;
     gap: 30px;
 }
 
-.add-category-price select, .add-category-price input{
+.add-category-price select, .add-category-price input {
     max-width: 120px;
     padding: 10px;
+    background-color: var(--input-bg, #ffffff);
+    color: var(--input-text-color, #000000);
+    border: 1px solid var(--input-border-color, #cccccc);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.add-button{
+.add-button {
     max-width: 120px;
     border: none;
     padding: 10px;
-    background-color: black;
-    color: white;
+    background-color: tomato;
+    color: var(--button-text-color, white);
     cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+    --add-text-color: #e0e0e0;
+    --input-bg: #333333;
+    --input-text-color: #ffffff;
+    --input-border-color: #555555;
+    --button-bg: tomato;
+    --button-text-color: #ffffff;
 }

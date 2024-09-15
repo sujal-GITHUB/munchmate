@@ -1,12 +1,14 @@
-.sidebar{
+.sidebar {
     width: 18%;
     min-height: 100vh;
-    border: 1.5px solid #a9a9a9; 
+    border: 1.5px solid var(--sidebar-border-color, #a9a9a9);
     border-top: 0;
-    font-size: max(1vw,10px);
+    font-size: max(1vw, 10px);
+    background-color: var(--sidebar-bg, #ffffff);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.sidebar-options{
+.sidebar-options {
     padding-top: 50px;
     padding-left: 20%;
     display: flex;
@@ -14,24 +16,36 @@
     gap: 20px;
 }
 
-.sidebar-option{
+.sidebar-option {
     display: flex;
     align-items: center;
     gap: 12px;
-    border: 1px solid #a9a9a9;
+    border: 1px solid var(--sidebar-option-border-color, #a9a9a9);
     border-right: 0;
     padding: 8px 10px;
     border-radius: 3px 0px 0px 3px;
     cursor: pointer;
+    background-color: var(--sidebar-option-bg, #ffffff);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.sidebar-option.active{
-    background-color: #fff0ed;
-    border-color: tomato;
+.sidebar-option.active {
+    background-color: var(--sidebar-active-bg, #fff0ed);
+    border-color: var(--sidebar-active-border-color, tomato);
 }
 
-@media (max-width:900px){
-    .sidebar-option p{
+@media (max-width: 900px) {
+    .sidebar-option p {
         display: none;
     }
+}
+
+/* Dark Mode */
+[data-theme='dark'] {
+    --sidebar-bg: #000000;
+    --sidebar-border-color: #555555;
+    --sidebar-option-border-color: #555555;
+    --sidebar-option-bg: #2b2b2b;
+    --sidebar-active-bg: #505050;
+    --sidebar-active-border-color: #ff5733;
 }
