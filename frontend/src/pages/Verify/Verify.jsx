@@ -23,7 +23,7 @@ const Verify = () => {
     }
 
     useEffect(()=>{
-
+        verifyPayment()
     },[])
 
   return (

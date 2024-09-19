@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 export const App = () => {
   
   const [darkMode,setDarkMode] = useState(false);
+  const url = 'http://localhost:4000'
 
   return (
     <div>
@@ -20,9 +21,9 @@ export const App = () => {
       <div className="app-content">
         <Sidebar darkMode={darkMode}/>
         <Routes>
-          <Route path='/add' element={<Add darkMode={darkMode}/>}/>
-          <Route path='/list' element={<List darkMode={darkMode}/>}/>
-          <Route path='/orders' element={<Orders darkMode={darkMode}/>}/>
+          <Route path='/add' element={<Add darkMode={darkMode} url={url}/>}/>
+          <Route path='/list' element={<List darkMode={darkMode} url={url}/>}/>
+          <Route path='/orders' element={<Orders darkMode={darkMode} url={url}/>}/>
         </Routes>
       </div>
     </div>

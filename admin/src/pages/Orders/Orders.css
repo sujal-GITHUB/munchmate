@@ -1,0 +1,101 @@
+.order-item {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr;
+    align-items: start;
+    gap: 30px;
+    border: 1px solid tomato;
+    padding: 20px;
+    margin: 30px 0px;
+    font-size: 14px;
+    color: #505050;
+}
+
+.order-item-food, .order-item-name {
+    font-weight: 600;
+}
+
+.order-item-name {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.order-item-address {
+    margin-bottom: 10px;
+}
+
+.order-item select {
+    margin-top: 4px;
+    background-color: #ffe8e4;
+    border: 1px solid tomato;
+    width: max(10vw, 120px);
+    padding: 10px;
+    outline: none;
+}
+
+[data-theme='dark'] .order-item{
+    color: rgb(179, 178, 178);
+}
+
+@media (max-width:800px) {
+    .order-item {
+        font-size: 12px;
+        grid-template-columns: 0.5fr 2fr 1fr;
+        padding: 15px 8px;
+    }
+    
+    .order-item select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: transparent;
+        border: 1px solid #ccc;
+        width: 60px;
+        height: 20px;
+        padding: 0;
+        font-size: 10px;
+        text-align: right;
+        color: transparent;
+        text-shadow: 0 0 0 black;
+        cursor: pointer;
+    }
+    
+    select::after {
+        content: '▼';
+        color: black;
+        font-size: 16px;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        pointer-events: none;
+    }
+    
+    select option {
+        color: black;
+    }
+
+    .order-item img {
+        width: 40px;
+    }
+}
+
+@media (max-width:400px) {
+    .order-item select {
+        width: 40px;
+    }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+    .order-item {
+        color: #dcdcdc; /* Lighter text color */
+        border-color: #ff6347; /* Tomato border remains */
+    }
+
+    .order-item select {
+        border-color: #ff6347; /* Tomato border */
+    }
+
+    .order-item img {
+        opacity: 0.8; /* Adjust image visibility if necessary */
+    }
+}

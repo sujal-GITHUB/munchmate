@@ -1,19 +1,26 @@
-import { useContext, useState, useEffect } from 'react'; // Import useEffect
+import { useContext, useState, useEffect } from 'react';
 import { assets } from "../assets/assets";
 import './Navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { StoreContext } from '../context/StoreContext';
 
-const Navbar = ({ setShowLogin}) => {
+const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("Home");
-    const { getTotalCartAmount,token,setToken,darkMode, setDarkMode } = useContext(StoreContext);
-    const navigate = useNavigate()
+    const { getTotalCartAmount, token, setToken, darkMode, setDarkMode } = useContext(StoreContext);
+    const navigate = useNavigate();
 
-    const logout = () =>{
-        localStorage.removeItem("token")
-        setToken("")
-        navigate('/')
-    }
+    const logout = () => {
+        localStorage.removeItem("token");
+        setToken("");  // Clear token from context
+        navigate('/');
+    };
+
+    useEffect(() => {
+        const storedToken = localStorage.getItem('token');
+        if (storedToken) {
+            setToken(storedToken);  // Initialize token in context
+        }
+    }, [setToken]);
 
     useEffect(() => {
         const storedDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -48,22 +55,23 @@ const Navbar = ({ setShowLogin}) => {
                     width={40}
                 />
                 {!token ? 
-                <button onClick={() => setShowLogin(true)}>Sign In</button> 
-                :<div className='navbar-profile'>
-                    <img src={assets.profile_icon} alt="" />  
-                    <ul className='nav-profile-dropdown'>
-                        <li>
-                            <img src={assets.bag_icon} alt="" />
-                            <p>Orders</p>
-                        </li>
-                        <hr /> 
-                        <li onClick={logout}>
-                            <img src={assets.logout_icon} alt="" />
-                            <p>Logout</p>
-                        </li>   
-                    </ul>  
-                </div>}
-                
+                    <button onClick={() => setShowLogin(true)}>Sign In</button> 
+                    : 
+                    <div className='navbar-profile'>
+                        <img src={assets.profile_icon} alt="" />  
+                        <ul className='nav-profile-dropdown'>
+                            <li onClick={() => navigate('/myorders')}>
+                                <img src={assets.bag_icon} alt="" />
+                                <p>Orders</p>
+                            </li>
+                            <hr /> 
+                            <li onClick={logout}>
+                                <img src={assets.logout_icon} alt="" />
+                                <p>Logout</p>
+                            </li>   
+                        </ul>  
+                    </div>
+                }
             </div>
         </div>
     );
