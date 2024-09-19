@@ -6,6 +6,7 @@ import Order from './pages/PlaceOrder/Order'
 import Footer from './components/Footer/Footer'
 import { useState } from 'react'
 import LoginPopup from './components/LoginPopup/LoginPopup'
+import Verify from './pages/Verify/Verify'
 
 const App = () => {
 
@@ -19,7 +20,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/cart' element={<Cart/>}/>
-        <Route path='/Order' element={<Order/>}/>
+        <Route path='/order' element={<Order/>}/>
+        <Route path='/verify' element={<Verify/>}/>
       </Routes> 
     </div>
     <Footer/>
