@@ -41,3 +41,33 @@ To run this project locally, follow the instructions below.
    git clone https://github.com/yourusername/chownow.git
    cd chownow
 
+2. Install the dependencies:
+   ```bash
+   npm install
+   
+3. Set up environment variables:
+   Create a .env file in the root directory and add your configuration variables:
+   ```makefile
+   MONGODB_URI=your_mongodb_uri
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   JWT_SECRET=your_jwt_secret
+
+4. Start the development server:
+
+   ```bash
+   npm start
+
+## Usage
+
+   Navigate to http://localhost:3000 in your browser to access the application.
+   Sign up or log in to your account.
+   Browse through available food items and add them to your cart.
+   Proceed to checkout and complete your order using Stripe.
+   
+## Contributing
+
+   Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+   This project is licensed under the MIT License. See the LICENSE file for details.
