@@ -1,4 +1,4 @@
-# ChowNow
+# Chownow
 
 ChowNow is a food delivery website that allows users to browse menus, place orders, and have their favorite meals delivered right to their doorstep. The platform provides a seamless user experience with features like user authentication, a shopping cart, and secure payment processing.
 
