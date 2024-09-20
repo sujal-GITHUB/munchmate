@@ -1,8 +1,11 @@
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+
+dotenv.config(); // Load environment variables
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb+srv://sujal21102004:sujal%28MONGODB%2974017359@cluster0.2cp3c.mongodb.net/Chownow?retryWrites=true&w=majority');
+        await mongoose.connect(process.env.MONGO_URI);
         console.log("DB connected!");
     } catch (error) {
         console.error(`MongoDB Connection Error: ${error.message}`);
