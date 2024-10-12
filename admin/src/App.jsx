@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 export const App = () => {
   
   const [darkMode,setDarkMode] = useState(false);
-  const url = 'http://localhost:4000'
+  const url = 'https://chownow-backend.onrender.com'
 
   return (
     <div>
