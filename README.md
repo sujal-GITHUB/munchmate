@@ -59,7 +59,7 @@ To run this project locally, follow the instructions below.
 
 ## Live Demo
 
-- Frontend: https://chownow.onrender.com
+- Frontend: https://munchmate.onrender.com/
 - Backend: [https://munchmate-backend-w257.onrender.com](https://munchmate-backend-w257.onrender.com/)
 - Admin: https://chownow-admin.onrender.com/
 
