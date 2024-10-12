@@ -38,7 +38,7 @@ To run this project locally, follow the instructions below.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/chownow.git
+   git clone [https://github.com/yourusername/chownow.git](https://github.com/sujal-GITHUB/munchmate/)
    cd chownow
 
 2. Install the dependencies:
