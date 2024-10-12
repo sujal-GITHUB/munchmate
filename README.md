@@ -61,8 +61,7 @@ To run this project locally, follow the instructions below.
 
 - Frontend: https://munchmate.onrender.com/
 - Backend: [https://munchmate-backend-w257.onrender.com](https://munchmate-backend-w257.onrender.com/)
-- Admin: https://chownow-admin.onrender.com/
-
+- Admin: https://munchmate-admin-tzui.onrender.com
 ## Usage
 
    Navigate to http://localhost:3000 in your browser to access the application.
