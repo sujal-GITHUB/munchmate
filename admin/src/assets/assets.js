@@ -10,7 +10,7 @@ import white_add from './add_white.png'
 import white_list from './white_list.png'
 import logo_light from './logo_light.png'
 
-export const url = "https://chownow-backend.onrender.com"
+export const url = "https://munchmate-backend-w257.onrender.com"
 
 export const assets = {
     white_list,

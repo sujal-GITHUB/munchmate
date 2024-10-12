@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 export const App = () => {
   
   const [darkMode,setDarkMode] = useState(false);
-  const url = 'https://chownow-backend.onrender.com'
+  const url = 'https://munchmate-backend-w257.onrender.com'
 
   return (
     <div>
