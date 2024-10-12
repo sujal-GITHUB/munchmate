@@ -8,10 +8,12 @@ import sun from './sun.png'
 import moon from './moon.png'
 import white_add from './add_white.png'
 import white_list from './white_list.png'
+import logo_light from './logo_light.png'
 
 export const assets = {
     white_list,
     white_add,
+    logo_light,
     sun,
     moon,
     logo,

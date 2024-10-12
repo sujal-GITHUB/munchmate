@@ -9,12 +9,12 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" className="logo" />
           <p>
-            At ChowNow, we believe in bringing delicious meals to your doorstep
+            At munchmate, we believe in bringing delicious meals to your doorstep
             with ease and convenience. Whether you are craving local favorites or
             looking to discover new flavors, our platform connects you with the
             best restaurants in town. With a user-friendly interface and fast
             delivery service, we ensure that your favorite food reaches you
-            fresh and hot. ChowNow—your go-to food delivery service, where
+            fresh and hot. munchmate—your go-to food delivery service, where
             quality, taste, and speed come together.
           </p>
           <div className="footer-social-icons">
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copyright">
-        Copyright 2024 © Chownow.com - All Rights Reserved.
+        Copyright 2024 © munchmate.com - All Rights Reserved.
       </p>
     </div>
   );
