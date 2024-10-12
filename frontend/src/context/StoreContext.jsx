@@ -6,7 +6,7 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) =>{
 
     const [cartItems, setCartItems] = useState({});
-    const url = "https://munchmate.onrender.com/"
+    const url = "https://munchmate-backend-w257.onrender.com"
     const [token,setToken] = useState("")
     const [darkMode, setDarkMode] = useState(false)
     const [food_list,setFoodList] = useState([])
