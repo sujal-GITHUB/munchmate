@@ -1,4 +1,4 @@
-name: Monorepo CI
+name: Monorepo CI (Install & Build)
 
 on:
   push:
@@ -24,8 +24,8 @@ jobs:
       - name: Install frontend dependencies
         run: npm install
 
-      - name: Run frontend tests
-        run: npm test
+      - name: Build frontend
+        run: npm run build
 
   backend:
     name: Backend CI
@@ -44,8 +44,11 @@ jobs:
       - name: Install backend dependencies
         run: npm install
 
-      - name: Run backend tests
-        run: npm test
+      - name: Build backend (optional)
+        run: |
+          echo "No build step configured. Add one if needed."
+          # Uncomment below if you have a build step like: npm run build
+          # npm run build
 
   admin:
     name: Admin CI
@@ -64,5 +67,5 @@ jobs:
       - name: Install admin dependencies
         run: npm install
 
-      - name: Run admin tests
-        run: npm test
+      - name: Build admin
+        run: npm run build

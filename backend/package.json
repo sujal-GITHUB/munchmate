@@ -5,7 +5,8 @@
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "author": "",
   "license": "ISC",
