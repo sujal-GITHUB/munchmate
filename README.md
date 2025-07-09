@@ -28,7 +28,7 @@ munchmate is a food delivery website that allows users to browse menus, place or
 - **Backend**: Node.js, Express, MongoDB
 - **Payment Processing**: Stripe
 - **Authentication**: Token-based authentication
-- **Deployment**: [Your hosting provider here]
+- **Deployment**: Render
 
 ## Getting Started
 
@@ -57,20 +57,18 @@ To run this project locally, follow the instructions below.
    ```bash
    npm start
 
-## Live Demo
 
-- Live: https://munchmate.onrender.com/
-  
 ## Usage
 
-   Navigate to http://localhost:3000 in your browser to access the application.
-   Sign up or log in to your account.
-   Browse through available food items and add them to your cart.
-   Proceed to checkout and complete your order using Stripe.
-   
+- Open your browser and navigate to http://localhost:3000.
+- Register a new account or log in if you already have one.
+- Explore restaurants and menu items.
+- Add desired items to your shopping cart.
+- Proceed to checkout and securely complete your order via Stripe.
+
 ## Contributing
 
-   Contributions are welcome! If you'd like to contribute, please fork the repository and create a pull request. For major changes, please open an issue first to discuss what you would like to change.
+Contributions are highly appreciated! If you wish to contribute, please fork the repository and submit a pull request. For substantial feature additions or bug fixes, consider opening an issue first to discuss your proposal.
 
 ## License
 
